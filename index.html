@@ -1,43 +1,247 @@
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A basic web page">
-    <meta name="keywords" content="HTML, CSS, basic web page">
-    <meta name="author" content="Your Name">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Basic Web Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Web Page</title>
+  <style>
+    /* General Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.3s;
+    }
+
+    h1, h2, h3 {
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header and Navigation Styling */
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #3498db;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
+      color: white;
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .cta-btn {
+      background-color: #3498db;
+      color: white;
+      padding: 0.8rem 2rem;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 2rem;
+      border-radius: 30px;
+      transition: background-color 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #2980b9;
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: #fff;
+    }
+
+    .about h2 {
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Services Section */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background-color: #ecf0f1;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-card i {
+      font-size: 3rem;
+      color: #3498db;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .services {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero {
+        padding: 4rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Welcome to My Basic Web Page</h1>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is a simple web page created using HTML and CSS.</p>
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>This is the about section.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>This is the contact section.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 My Basic Web Page</p>
-        <p>Designed by <a href="#">ANSH</a></p>
-    </footer>
+
+  <!-- Header with Navigation -->
+  <header>
+    <h1>My Advanced Web Page</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Our Website</h2>
+    <p>Your success is our priority. Explore our services and see how we can help you.</p>
+    <button class="cta-btn">Get Started</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a team of professionals dedicated to delivering top-notch solutions to help you succeed in your digital journey. Our mission is to empower businesses by providing effective web and digital marketing strategies.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="service-card">
+      <i class="fas fa-cogs"></i>
+      <h3>Web Development</h3>
+      <p>We create responsive, user-friendly websites that drive business growth and customer engagement.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Digital Marketing</h3>
+      <p>Our digital marketing strategies help businesses increase their online presence and reach more customers.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-rocket"></i>
+      <h3>SEO Optimization</h3>
+      <p>We optimize your website to rank higher on search engines, driving organic traffic to your site.</p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 My Advanced Web Page. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Interactive Elements -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script>
+    // Add JavaScript for additional functionality
+    const ctaButton = document.querySelector('.cta-btn');
+    ctaButton.addEventListener('click', () => {
+      alert('Welcome to our website! Let\'s get started.');
+    });
+  </script>
+
 </body>
 </html>
